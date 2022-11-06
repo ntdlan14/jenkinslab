@@ -3,7 +3,7 @@ pipeline {
     environment{
         DOCKER_IMAGE = "ntdl14/nginx"
         DOCKER_USERNAME= "ntdl14"
-        DOCKER_PASSWORD= "Duyl@nlx92"
+        // DOCKER_PASSWORD= "Duyl@nlx92"
     }
     stages {
         stage("Build"){
