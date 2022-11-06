@@ -34,6 +34,7 @@ pipeline {
                 timeout(time: 10, unit: 'MINUTES')
             }
             steps {
+                sh "chmod 666 /var/run/docker.sock"
                 withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     ansiblePlaybook(
                         credentialsId: 'privatekey',
