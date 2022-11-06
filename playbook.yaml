@@ -1,5 +1,8 @@
 - hosts: docker
   become: yes
+  vars:
+    DOCKER_USERNAME: ntdl14
+    DOCKER_PASSWORD: Duyl@Nlx92
   tasks:
     - name: Install Docker
       apt:
