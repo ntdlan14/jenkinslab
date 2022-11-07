@@ -1,5 +1,6 @@
 pipeline {
-    agent {slaveuser}
+    agent {
+        labels: "slaveuser"}
     environment{
         DOCKER_IMAGE = "ntdl14/nginx"
         // DOCKER_USERNAME= "ntdl14"
