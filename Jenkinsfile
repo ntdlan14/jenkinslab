@@ -37,7 +37,7 @@ pipeline {
             //     node{label "slave"}
             //         }
             input{
-                message "Do you want to deploy?"
+                message "Do you want to deploy?"}
             options {
                 timeout(time: 10, unit: 'MINUTES')
             }
