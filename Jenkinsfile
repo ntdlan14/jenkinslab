@@ -1,8 +1,8 @@
 pipeline {
     // agent any
-        agent {
-            node{label "slave"}
-            }
+        // agent {
+        //     node{label "slave"}
+        //     }
     environment{
         DOCKER_IMAGE = "ntdl14/nginx"
         // DOCKER_USERNAME= "ntdl14"
@@ -36,6 +36,8 @@ pipeline {
             //    agent {
             //     node{label "slave"}
             //         }
+            input{
+                message "Do you want to deploy?"
             options {
                 timeout(time: 10, unit: 'MINUTES')
             }
