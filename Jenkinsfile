@@ -31,10 +31,9 @@ pipeline {
                 sh "docker image rm ${DOCKER_IMAGE}:latest"
             }
         }
-
         stage("Deploy"){
                agent {
-                   label "slave"
+                node{label "slave"}
                     }
             options {
                 timeout(time: 10, unit: 'MINUTES')
