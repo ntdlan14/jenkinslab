@@ -1,7 +1,8 @@
 pipeline {
-    agent any
-    // agent {
-    //     label 'slave'}
+    // agent any
+        agent {
+            node{label "slave"}
+            }
     environment{
         DOCKER_IMAGE = "ntdl14/nginx"
         // DOCKER_USERNAME= "ntdl14"
@@ -32,9 +33,9 @@ pipeline {
             }
         }
         stage("Deploy"){
-               agent {
-                node{label "slave"}
-                    }
+            //    agent {
+            //     node{label "slave"}
+            //         }
             options {
                 timeout(time: 10, unit: 'MINUTES')
             }
