@@ -15,7 +15,7 @@
     - name: Copy file
       copy:
         src: docker-compose.yaml
-        dest: /home/LanNguyen/
+        dest: /home/
     - name: Restart docker-compose
       shell: |
           docker-compose stop
